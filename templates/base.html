@@ -10,7 +10,6 @@
     <meta charset="utf-8">
 
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='ico/favicon.ico') }}">
     {% endblock %}
   </head>
   <body>
@@ -19,7 +18,6 @@
         <div class="content">
         <div class="jumbotron">
             <h1>{% block pagetitle %}{% endblock %}</h1>
-            {% with messages = get_flashed_messages(with_categories=true) %}
                 {% if messages %}
                     {# <ul class="flashes"> #}
                         {% for category, message in messages %}
@@ -28,7 +26,6 @@
                         {% endfor %}
                     {# </ul> #}
                 {% endif %}
-            {% endwith %}
             
               {% block content %}
               {% endblock %}
@@ -48,7 +45,7 @@
         {% endblock %}
     </div>
     {% block js_footer %}
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script src="//ajax.useso.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
       <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     {% endblock %}
   </body>
